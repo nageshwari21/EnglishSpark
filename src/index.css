@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #FFFFFF;
+  color: #1A1A2E;
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-md bg-accent px-6 py-3 font-semibold text-white transition-all duration-300 hover:bg-accent-dark hover:shadow-lg;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-md border-2 border-primary bg-white px-6 py-3 font-semibold text-primary transition-all duration-300 hover:bg-primary hover:text-white;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-md bg-primary px-6 py-3 font-semibold text-white transition-all duration-300 hover:bg-primary-dark hover:shadow-lg;
+  }
+  .section-eyebrow {
+    @apply text-sm font-semibold uppercase tracking-wider text-accent;
+  }
+  .card {
+    @apply rounded-xl bg-white shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-cardHover;
+  }
+  .input-field {
+    @apply w-full rounded-md border border-gray-300 px-4 py-3 text-sm outline-none transition-colors focus:border-primary;
+  }
+  .breadcrumb-bar {
+    @apply bg-primary py-10 text-white;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #0B2E83;
+  border-radius: 8px;
+}
